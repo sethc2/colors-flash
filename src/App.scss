@@ -1,5 +1,34 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  > div {
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    > div {
+      background: teal;
+
+      border: 1px solid black;
+      width: 18vw;
+      height: 18vh;
+      margin: 2px;
+      transition: background 1s ease;
+      &.not-running {
+        transition: background 0.2s ease;
+      }
+    }
+  }
+
+  .options {
+    position: absolute;
+    visibility: visible;
+    width: 75vw;
+    height: 75vh;
+    textarea {
+      height: 10vh;
+    }
+  }
 }
 
 .App-logo {
